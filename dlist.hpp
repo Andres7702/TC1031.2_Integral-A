@@ -11,6 +11,9 @@
 #include <cstring>
 #include <string>
 #include "student.hpp"
+#include "Calificaciones.hpp"
+
+using namespace std;
 
 //CLASE DLIST: Manejador de objetos de tipo estudiante//
 
@@ -25,10 +28,12 @@ public:
     //METODOS//
     
     void add_student(string,int,int);
-    void update(int, int) const;
-    int search(string) const;
+    void update_year() const;
+    bool find(int) const;
     void deleteAt(int);
     void toString() const;
+    void check_info(int) const;
+    void update_calificacion(int,int,double);
 
 private:
     
@@ -102,6 +107,7 @@ void DList::add_student(string n, int i, int g){
     bool cont = true;
     
     p = head;
+
     
     if(empty()){
         addFirst(n, i, g);
@@ -163,78 +169,76 @@ void DList::add_student(string n, int i, int g){
 }
 
 
-//search: Recibe un nombre y devuelve ID//
+//find checa si ya existe un ID//
 
-int DList::search(string n) const {
+bool DList::find(int i) const {
     student *p;
     
     p = head;
-    int aux = p->ID;
     
     while (p != 0){
-        if (p->name == n){
-            return aux;
+        if (p->ID == i){
+            return true;
         }
         p = p->next;
     }
-    return -1;
+    return false;
 }
 
 
-//update: recibe un int de posicion y un valor de grado. Cambia el valor actual de grado por el nuevo//
-
-void DList::update(int pos, int g) const{
-    int aux = 0;
-    student *p;
+void DList::update_calificacion(int e, int p, double c){
+    student *k;
     
-    if (pos > 0 or pos <= size){
-        p = head;
-        
-        while (aux != pos){
-            p = p->next;
-            aux++;
-        }
-        
-        p->grade = g;
+    k = head;
+    
+    while (k != 0 && k->ID != e){
+            k = k->next;
     }
+    if(k != 0){
+        k->C.update_calificacion(p,c);
+    }
+    else{
+        cout<<"Ese alumno no existe. \n";
+        cout<<"\n";
+    }
+        
 }
 
 
 //deleteAt: Recibe un valor de posicion y elimina ese estudiante de la lista//
 
-void DList::deleteAt(int pos) {
+void DList::deleteAt(int i) {
     student *p1;
     student *p2;
     
     p1 = head;
-    int aux = 0;
     
-    if ((pos > 0 or pos <= size) and size > 0){
+    while(p1->next != 0 && p1->next->ID != i){
+        p1 = p1->next;
+    }
+    if(p1->previous == 0 && p1->next == 0){
+        head = 0;
+    }
+    else if(head->ID == i){
+        deleteFirst();
+    }
+    else if(p1->next == 0){
+        p1->previous->next = 0;
+    }
+    else{
+        p2 = p1;
         
-        if(pos == 0){
-            
-            deleteFirst();
-        }
+        p2 = p2->next;
         
-        else{
-            
-            while (aux != pos-1){
-                p1 = p1->next;
-                aux++;
-            }
-            
-            p2 = p1;
-            
-            p2 = p2->next;
-            
-            p1->next = p2->next;
-            
+        p1->next = p2->next;
+        
+        if(p2->next != 0){
             p2->next->previous = p1;
-            
-            delete p2;
-            
-            size--;
         }
+        
+        delete p2;
+        
+        size--;
     }
 }
 
@@ -259,19 +263,54 @@ void DList::toString() const {
     std::stringstream aux;
     student *p;
     p = head;
+    aux<<"----------------------------------";
     while (p != 0) {
+        aux << "\n";
         aux <<"Name: "<<p->name;
         aux << "\n";
         aux<<"ID: "<<p->ID;
         aux << "\n";
         aux<<"grade: "<<p->grade;
         aux << "\n";
+        aux<<(p->C.toString());
         if (p->next != 0) {
             aux << "\n";
         }
+        aux<<"----------------------------------";
         p = p->next;
     }
     cout<<aux.str();
+}
+
+void DList::check_info(int i) const{
+    std::stringstream aux;
+    student *p;
+    p = head;
+    
+    while(p != 0 && p->ID != i){
+        p = p->next;
+    }
+    if(p == 0){
+        aux<<"\n";
+        aux<<"\n";
+        aux<<"Ese Alumno no existe";
+        aux<<"\n";
+        cout<<aux.str();
+    }
+    else{
+        aux<<"----------------------------------";
+        aux << "\n";
+        aux <<"Name: "<<p->name;
+        aux << "\n";
+        aux<<"ID: "<<p->ID;
+        aux << "\n";
+        aux<<"grade: "<<p->grade;
+        aux << "\n";
+        aux<<(p->C.toString());
+        aux<<"----------------------------------";
+        
+        cout<<aux.str();
+    }
 }
 
 #endif /* dlist_hpp */

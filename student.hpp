@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include <sstream>
 #include "dlist.hpp"
+#include "Calificaciones.hpp"
 
 using namespace std;
 
@@ -24,6 +25,7 @@ private:
     
     student();
     student(string,int,int);
+    student(string,int,int,double,double,double,double,double,double,double,double);
     student(string, int, int,student*, student*);
     
     //VARIABLES DE ESTUDIANTE//
@@ -31,6 +33,7 @@ private:
     string name;
     int ID;
     int grade;
+    Calificaciones C;
     student *previous;
     student *next;
     
@@ -45,6 +48,7 @@ student:: student(){
     grade = 0;
     next = 0;
     previous = 0;
+    C = Calificaciones();
 }
 
 student:: student(string n, int i, int g){
@@ -53,6 +57,16 @@ student:: student(string n, int i, int g){
     grade = g;
     next = 0;
     previous = 0;
+    C = Calificaciones();
+}
+
+student:: student(string n, int i, int g, double m, double f, double b, double q, double in, double e, double et, double d){
+    name = n;
+    ID = i;
+    grade = g;
+    next = 0;
+    previous = 0;
+    C = Calificaciones(m,f,b,q,in,e,et,d);
 }
 
 student:: student(string n, int i,  int g, student* nxt, student* prv){
@@ -61,5 +75,7 @@ student:: student(string n, int i,  int g, student* nxt, student* prv){
     grade = g;
     next = nxt;
     previous = prv;
+    C = Calificaciones();
 }
 #endif /* student_hpp */
+
