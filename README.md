@@ -144,7 +144,7 @@ Class AVL
     es similar a una busqueda dentro de un arbol por lo que su complejidad en el peor de sus casos de O(logn)
     
     
-# Implementa Acciones Cientificas
+# SICT0303B: Implementa Acciones Cientificas
 
 Implementa mecanismos para consultar información de las estructuras correctos y útiles dentro de un programa:
 En el programa utilizo una lista doblemente ligada e implemento sus respectivos metodos para agregar, eliminar,
