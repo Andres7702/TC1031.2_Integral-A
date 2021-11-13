@@ -104,7 +104,6 @@ void DList::addSecond(string n, int i, int g){
 void DList::add_student(string n, int i, int g){
     student *newstudent, *p;
     
-    bool cont = true;
     
     p = head;
 
@@ -118,17 +117,17 @@ void DList::add_student(string n, int i, int g){
     else{
         newstudent = new student(n,i,g);
         
-        while(p->next != 0 && cont){
-            if(p->ID == newstudent->ID){
-                newstudent->ID = (newstudent->ID)+1;
-            }
-            else if(p->ID < newstudent->ID){
-                p = p->next;
-            }
-            else{
-                cont = false;
-            }
+        while(p->next != 0 && p->next->ID < newstudent->ID){
+            p = p->next;
         }
+        
+        if(p->previous != 0){
+            cout<<p->previous->ID;
+        }
+        if(p->next != 0){
+            cout<<p->next->ID;
+        }
+
         if(p->next == 0){
             if(p->ID > newstudent->ID){
                 

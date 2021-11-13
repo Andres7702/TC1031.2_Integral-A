@@ -19,6 +19,8 @@
 #include "student.hpp"
 #include "Calificaciones.hpp"
 #include "AVL.hpp"
+#include "casos_de_prueba.hpp"
+
 
 using namespace std;
 
@@ -34,6 +36,7 @@ void menu_principal(){
     cout<<"7. Modificar Calificaciones. \n";
     cout<<"8. Eliminar Estudiante. \n";
     cout<<"9. Eliminar Maestro. \n";
+    cout<<"10. CASOS DE PRUEBA. \n";
     cout<<"\n";
 }
 
@@ -284,6 +287,9 @@ int main() {
                 cout<<"Ese maestro no existe. \n ";
                 cout<<"\n";
             }
+        }
+        else if(opcion == 10){
+            casos_de_prueba();
         }
         else{
             cout<<"Esa opcion no existe. \n";
