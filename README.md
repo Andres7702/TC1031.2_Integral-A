@@ -150,7 +150,7 @@ Implementa mecanismos para consultar información de las estructuras correctos y
 En el programa utilizo una lista doblemente ligada e implemento sus respectivos metodos para agregar, eliminar,
 imprimir y modificar datos en dichas estructuras.
 
-# NOTA
+# CORRECCIONES
 
 No hice entregas de la parte de algoritmo de ordenamiento y tampoco de la arboles pero en este programa ya estan implementadas. 
 Con este proyecto espero cumplir con las evidencias:
