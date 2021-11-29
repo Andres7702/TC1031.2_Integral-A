@@ -137,7 +137,7 @@ Con este proyecto espero cumplir con las evidencias:
        Selecciona y usa una estructura lineal adecuada al problema
        Usa un árbol adecuado para resolver un problema
        Implementa mecanismos para consultar información de las estructuras correctos y útiles dentro de un programa
-       Implementa mecanismos de estructura de archivos correctos
+       Implementa mecanismos de escritura de archivos correctos
        
        
 
