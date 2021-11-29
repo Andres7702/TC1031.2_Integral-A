@@ -398,15 +398,17 @@ void AVL::remove(int i) {
         } else {
             root->remove(i);
         }
-        root->max_depth();
-        Maestro *temp;
-        int check_val = 0;
-        bool aux = false;
-        temp = root->check_tree(&check_val, 0, &aux);
-        if (check_val == root->ID){
-            root = temp;
+        if(!empty()){
+            root->max_depth();
+            Maestro *temp;
+            int check_val = 0;
+            bool aux = false;
+            temp = root->check_tree(&check_val, 0, &aux);
+            if (check_val == root->ID){
+                root = temp;
+            }
+            root->max_depth();
         }
-        root->max_depth();
     }
 }
 

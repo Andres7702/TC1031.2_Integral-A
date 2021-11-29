@@ -31,7 +31,7 @@ public:
     void update_year() const;
     bool find(int) const;
     void deleteAt(int);
-    void toString() const;
+    string toString() const;
     void check_info(int) const;
     void update_calificacion(int,int,double);
 
@@ -258,7 +258,7 @@ void DList::deleteFirst(){
 //toString: imprime los datos de todos los estudiantes de la lista//
 
 
-void DList::toString() const {
+string DList::toString() const {
     std::stringstream aux;
     student *p;
     p = head;
@@ -278,7 +278,7 @@ void DList::toString() const {
         aux<<"----------------------------------";
         p = p->next;
     }
-    cout<<aux.str();
+    return aux.str();
 }
 
 void DList::check_info(int i) const{

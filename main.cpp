@@ -10,18 +10,21 @@
 
 
 #include <iostream>
+#include <fstream>
 #include <string>
 #include <sstream>
 #include <vector>
 #include <cstring>
 #include <string>
+#include <cstdlib>
 #include "dlist.hpp"
 #include "student.hpp"
 #include "Calificaciones.hpp"
 #include "AVL.hpp"
 #include "casos_de_prueba.hpp"
-
-
+using std::cerr;
+using std::endl;
+using std::ofstream;
 using namespace std;
 
 
@@ -36,7 +39,7 @@ void menu_principal(){
     cout<<"7. Modificar Calificaciones. \n";
     cout<<"8. Eliminar Estudiante. \n";
     cout<<"9. Eliminar Maestro. \n";
-    cout<<"10. CASOS DE PRUEBA. \n";
+    cout<<"10. Guardar lista en arhivo. \n";
     cout<<"\n";
 }
 
@@ -134,8 +137,8 @@ int main() {
             cout<<"Introuduce ID: \n";
             cin>>ID;
             cout<<"Introduce Materia que enseña: \n";
-            getline(cin, nombre);
-            getline(cin, nombre);
+            getline(cin, materia);
+            getline(cin, materia);
             cout<<"Introduce Grado que enseña. \n";
             getline(cin, grado);
             cout<<"Listo \n \n";
@@ -150,7 +153,7 @@ int main() {
             cin>>opcion_grupo;
             cout<<"\n";
             if(opcion_grupo < size){
-                Grupos[opcion_grupo]->toString();
+                cout<<Grupos[opcion_grupo]->toString();
                 cout<<"\n";
                 cout<<"\n";
             }
@@ -288,8 +291,61 @@ int main() {
                 cout<<"\n";
             }
         }
+        //Escribe la informacion de un grupo de estudiantes o de los maestros en un archivo de texto
         else if(opcion == 10){
-            casos_de_prueba();
+            
+            string imp = "0";
+            string file;
+            
+            int opcion_imprime;
+            cout<<"Que vas a imprimir: \n";
+            cout<<"1. Grupo de Alumnos \n";
+            cout<<"2. Grupo de Maestros \n";
+            
+            cin>>opcion_imprime;
+            cout<<"\n";
+            
+            if(opcion_imprime == 1){
+                int opcion_grupo;
+                
+                menu_Grupo(size);
+                
+                cin>>opcion_grupo;
+                cout<<"\n";
+                if(opcion_grupo < size){
+                    imp = Grupos[opcion_grupo]->toString();
+                    file = "Alumnos.txt";;
+                }
+                else{
+                    cout<<"Ese Grupo no existe. \n";
+                    cout<<"\n";
+                
+                }
+            }
+            else if(opcion_imprime == 2){
+                imp = Maestros.to_string();
+                file = "Maestros .txt";
+            }
+            else{
+                cout<<"Esa opcion no existe. \n";
+                cout<<"\n";
+            }
+            
+            if(imp != "0"){
+                std::ofstream archivo;
+
+                archivo.open(file);
+                if( archivo ) {
+                    for (int i = 0; i < imp.size(); ++i)
+                    archivo << imp[i];
+                    archivo.close();
+                    cout << "¡Listo!" << endl;
+                    cout << "\n" << endl;
+                }
+                else{
+                    cout << "Error: file could not be opened" << endl;
+                }
+            }
         }
         else{
             cout<<"Esa opcion no existe. \n";
