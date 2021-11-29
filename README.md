@@ -14,7 +14,7 @@ El usuario podra agregar, eliminar y consultar los datos de cada una de las pers
 Para este problema utilize un lista doblemente ligada, ya que esto me permitiria acceder a los elementos de una forma mas rapida, ademas que
 me permite hacer un sort dentro de esta lista.
 
-Usa un árbol adecuado para resolver un problema: 
+### Usa un árbol adecuado para resolver un problema: 
 Escogi un arbol de tipo AVL para guardar mi estructura de maestros ya que, a diferencia de los estudiantes, 
 los maestros no se dividen por grupos mas chicos. En caso de tener cientos de maestros, el guardarlos en una lista podria llegar a ser tardado, por lo que
 mejor los implemente en un arbol AVL para tener un acceso mas rapido a ellos.
@@ -22,7 +22,7 @@ mejor los implemente en un arbol AVL para tener un acceso mas rapido a ellos.
 
 # SICT0301B: Evalúa los componentes
         
-Hace un análisis de complejidad correcto y completo para todo el programa y sus compenetes:
+### Hace un análisis de complejidad correcto y completo para todo el programa y sus compenetes:
 
 Clase DList
 
@@ -119,11 +119,11 @@ Class AVL
     
 # SICT0303B: Implementa Acciones Cientificas
 
-Implementa mecanismos para consultar información de las estructuras correctos y útiles dentro de un programa:
+### Implementa mecanismos para consultar información de las estructuras correctos y útiles dentro de un programa:
 En el programa utilizo una lista doblemente ligada y un arbol de tipo AVL ademas implemento sus respectivos metodos
 para agregar, eliminar, imprimir y modificar datos en dichas estructuras.
 
-Implementa mecanismos de escritura de archivos correctos:
+### Implementa mecanismos de escritura de archivos correctos:
 En el programa una de las funciones dentro del main me permite escribir la informacion de un grupo de estudiantes
 o de los maestros registrados en un archivo de texto. Los alumnos se guardan en el archivo Alumnos.txt y los 
 maestros en Maestros.txt
