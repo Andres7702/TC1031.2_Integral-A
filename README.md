@@ -11,44 +11,17 @@ El usuario podra agregar, eliminar y consultar los datos de cada una de las pers
 # SICT0302B: Toma decisiones
 
 Selecciona y usa una estructura lineal adecuada al problema:
-Para este problema utiliza un lista doblemente ligada, ya que esto me permitiria acceder a los elementos de una forma mas rapida, ademas que
+Para este problema utilize un lista doblemente ligada, ya que esto me permitiria acceder a los elementos de una forma mas rapida, ademas que
 me permite hacer un sort dentro de esta lista.
 
-Selecciona un algoritmo de ordenamiento adecuado al problema:
-Para el problema utiliza un algoritmo del tipo bubble sort. Escogi este algoritmo por que la lista se acomoda automaticamente cada vez que 
-agregamos un estudiante nuevo, esto significa que el bubble sort solo tendra que recorrer la lista una vez ya que todo hasta ese nuevo elemento
-ya esto ordenado.
-
-Usa un árbol adecuado para resolver un problema: Escogi un arbol de tipo AVL para guardar mi estructura de maestros ya que, a diferencia de los estudiantes, 
+Usa un árbol adecuado para resolver un problema: 
+Escogi un arbol de tipo AVL para guardar mi estructura de maestros ya que, a diferencia de los estudiantes, 
 los maestros no se dividen por grupos mas chicos. En caso de tener cientos de maestros, el guardarlos en una lista podria llegar a ser tardado, por lo que
 mejor los implemente en un arbol AVL para tener un acceso mas rapido a ellos.
 
 
 # SICT0301B: Evalúa los componentes
-
-Presenta Casos de Prueba correctos y completos para todas las funciones y procedimientos del programa:
-
-Los casos de pruebas para todas las funciones se encuentran en "casos_de_prueba.hpp" donde se prueban las funciones de:
-
-    El ordenamiento de los elementos en la lista doblemente ligada de estudiantes.
-
-    La modificacion de un elemento de la lista de estudiantes (Calificaciones).
-    
-    Eliminar un elemento de la lista de estudiantes.
-    
-    Impresion de Lista de estudiantes completa.
-    
-    Impresion de un estudiante en particular, buscandolo en la lista por medio de su ID.
-    
-    Agregar un elemento al arbol de Maestros.
-    
-    Eliminar un elemento del arbol de Maestros. 
-    
-    Impresion de arbol de Maestros completo.
-    
-    Impresion de un Maestri en particular, buscandolo en el arbol por medio de su ID.
-    
-    
+        
 Hace un análisis de complejidad correcto y completo para todo el programa y sus compenetes:
 
 Clase DList
@@ -147,20 +120,25 @@ Class AVL
 # SICT0303B: Implementa Acciones Cientificas
 
 Implementa mecanismos para consultar información de las estructuras correctos y útiles dentro de un programa:
-En el programa utilizo una lista doblemente ligada e implemento sus respectivos metodos para agregar, eliminar,
-imprimir y modificar datos en dichas estructuras.
+En el programa utilizo una lista doblemente ligada y un arbol de tipo AVL ademas implemento sus respectivos metodos
+para agregar, eliminar, imprimir y modificar datos en dichas estructuras.
+
+Implementa mecanismos de escritura de archivos correctos:
+En el programa una de las funciones dentro del main me permite escribir la informacion de un grupo de estudiantes
+o de los maestros registrados en un archivo de texto. Los alumnos se guardan en el archivo Alumnos.txt y los 
+maestros en Maestros.txt
 
 # CORRECCIONES
 
-No hice entregas de la parte de algoritmo de ordenamiento y tampoco de la arboles pero en este programa ya estan implementadas. 
+No hice entregas de la parte de arboles pero en este programa ya estan implementadas. 
 Con este proyecto espero cumplir con las evidencias:
 
-       Presenta Casos de Prueba correctos y completos para todas las funciones y procedimientos del programa    
        Hace un análisis de complejidad correcto y completo para todo el programa y sus compenetes
        Selecciona y usa una estructura lineal adecuada al problema
-       Selecciona un algoritmo de ordenamiento adecuado al problema
        Usa un árbol adecuado para resolver un problema
        Implementa mecanismos para consultar información de las estructuras correctos y útiles dentro de un programa
+       Implementa mecanismos de estructura de archivos correctos
+       
        
 
 
