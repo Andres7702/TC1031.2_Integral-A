@@ -10,7 +10,7 @@ El usuario podra agregar, eliminar y consultar los datos de cada una de las pers
 
 # SICT0302B: Toma decisiones
 
-Selecciona y usa una estructura lineal adecuada al problema:
+## Selecciona y usa una estructura lineal adecuada al problema:
 Para este problema utilize un lista doblemente ligada, ya que esto me permitiria acceder a los elementos de una forma mas rapida, ademas que
 me permite hacer un sort dentro de esta lista.
 
