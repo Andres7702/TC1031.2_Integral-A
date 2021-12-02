@@ -78,4 +78,3 @@ student:: student(string n, int i,  int g, student* nxt, student* prv){
     C = Calificaciones();
 }
 #endif /* student_hpp */
-

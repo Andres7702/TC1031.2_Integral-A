@@ -1,7 +1,7 @@
 
 
-#ifndef list_hpp
-#define list_hpp
+#ifndef dlist_hpp
+#define dlist_hpp
 #include <stdio.h>
 
 #include <iostream>
@@ -119,13 +119,6 @@ void DList::add_student(string n, int i, int g){
         
         while(p->next != 0 && p->next->ID < newstudent->ID){
             p = p->next;
-        }
-        
-        if(p->previous != 0){
-            cout<<p->previous->ID;
-        }
-        if(p->next != 0){
-            cout<<p->next->ID;
         }
 
         if(p->next == 0){

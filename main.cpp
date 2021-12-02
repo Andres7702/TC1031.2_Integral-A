@@ -21,7 +21,6 @@
 #include "student.hpp"
 #include "Calificaciones.hpp"
 #include "AVL.hpp"
-#include "casos_de_prueba.hpp"
 using std::cerr;
 using std::endl;
 using std::ofstream;
@@ -40,6 +39,7 @@ void menu_principal(){
     cout<<"8. Eliminar Estudiante. \n";
     cout<<"9. Eliminar Maestro. \n";
     cout<<"10. Guardar lista en arhivo. \n";
+    cout<<"11. PROFE SELECCIONE ESTA: AUTOLLENADO PARA EJEMPLOS. \n";
     cout<<"\n";
 }
 
@@ -70,7 +70,7 @@ int main() {
     
     bool cont = true;
     int size = 0;
-
+    
     while(cont){
         int opcion;
         menu_principal();
@@ -347,10 +347,124 @@ int main() {
                 }
             }
         }
+        //Llenado de listas para ejemplo
+        else if(opcion == 11){
+            Grupos[size++] = new DList();
+            
+            Grupos[size-1]->add_student("Andrés Acevedo", 1, 1);
+            Grupos[size-1]->update_calificacion(1, 0, 100);
+            Grupos[size-1]->update_calificacion(1, 1, 100);
+            Grupos[size-1]->update_calificacion(1, 2, 100);
+            Grupos[size-1]->update_calificacion(1, 3, 0);
+            Grupos[size-1]->update_calificacion(1, 4, 100);
+            Grupos[size-1]->update_calificacion(1, 5, 100);
+            Grupos[size-1]->update_calificacion(1, 6, 100);
+            Grupos[size-1]->update_calificacion(1, 7, 100);
+            Grupos[size-1]->add_student("Diego Ramirez", 2, 1);
+            Grupos[size-1]->update_calificacion(2, 0, 100);
+            Grupos[size-1]->update_calificacion(2, 1, 100);
+            Grupos[size-1]->update_calificacion(2, 2, 100);
+            Grupos[size-1]->update_calificacion(2, 3, 100);
+            Grupos[size-1]->update_calificacion(2, 4, 100);
+            Grupos[size-1]->update_calificacion(2, 5, 0);
+            Grupos[size-1]->update_calificacion(2, 6, 100);
+            Grupos[size-1]->update_calificacion(2, 7, 100);
+            Grupos[size-1]->add_student("Renata Medina", 3, 1);
+            Grupos[size-1]->update_calificacion(3, 0, 100);
+            Grupos[size-1]->update_calificacion(3, 1, 0);
+            Grupos[size-1]->update_calificacion(3, 2, 100);
+            Grupos[size-1]->update_calificacion(3, 3, 100);
+            Grupos[size-1]->update_calificacion(3, 4, 100);
+            Grupos[size-1]->update_calificacion(3, 5, 100);
+            Grupos[size-1]->update_calificacion(3, 6, 100);
+            Grupos[size-1]->update_calificacion(3, 7, 100);
+            Grupos[size-1]->add_student("Elian Raya", 4, 1);
+            Grupos[size-1]->update_calificacion(4, 0, 100);
+            Grupos[size-1]->update_calificacion(4, 1, 100);
+            Grupos[size-1]->update_calificacion(4, 2, 100);
+            Grupos[size-1]->update_calificacion(4, 3, 100);
+            Grupos[size-1]->update_calificacion(4, 4, 100);
+            Grupos[size-1]->update_calificacion(4, 5, 100);
+            Grupos[size-1]->update_calificacion(4, 6, 100);
+            Grupos[size-1]->update_calificacion(4, 7, 0);
+            Grupos[size-1]->add_student("Valeria Flores", 5, 1);
+            Grupos[size-1]->update_calificacion(5, 0, 100);
+            Grupos[size-1]->update_calificacion(5, 1, 100);
+            Grupos[size-1]->update_calificacion(5, 2, 100);
+            Grupos[size-1]->update_calificacion(5, 3, 100);
+            Grupos[size-1]->update_calificacion(5, 4, 100);
+            Grupos[size-1]->update_calificacion(5, 5, 0);
+            Grupos[size-1]->update_calificacion(5, 6, 100);
+            Grupos[size-1]->update_calificacion(5, 7, 100);
+            Grupos[size-1]->add_student("Salvador Vivas", 6, 1);
+            Grupos[size-1]->update_calificacion(6, 0, 100);
+            Grupos[size-1]->update_calificacion(6, 1, 100);
+            Grupos[size-1]->update_calificacion(6, 2, 100);
+            Grupos[size-1]->update_calificacion(6, 3, 100);
+            Grupos[size-1]->update_calificacion(6, 4, 0);
+            Grupos[size-1]->update_calificacion(6, 5, 100);
+            Grupos[size-1]->update_calificacion(6, 6, 100);
+            Grupos[size-1]->update_calificacion(6, 7, 100);
+            
+            Grupos[size++] = new DList();
+            
+            Grupos[size-1]->add_student("Alan Razo", 1, 2);
+            Grupos[size-1]->update_calificacion(1, 0, 100);
+            Grupos[size-1]->update_calificacion(1, 1, 0);
+            Grupos[size-1]->update_calificacion(1, 2, 100);
+            Grupos[size-1]->update_calificacion(1, 3, 100);
+            Grupos[size-1]->update_calificacion(1, 4, 100);
+            Grupos[size-1]->update_calificacion(1, 5, 100);
+            Grupos[size-1]->update_calificacion(1, 6, 100);
+            Grupos[size-1]->update_calificacion(1, 7, 100);
+            Grupos[size-1]->add_student("Sebastian Camacho", 2, 2);
+            Grupos[size-1]->update_calificacion(2, 0, 100);
+            Grupos[size-1]->update_calificacion(2, 1, 100);
+            Grupos[size-1]->update_calificacion(2, 2, 100);
+            Grupos[size-1]->update_calificacion(2, 3, 100);
+            Grupos[size-1]->update_calificacion(2, 4, 100);
+            Grupos[size-1]->update_calificacion(2, 5, 100);
+            Grupos[size-1]->update_calificacion(2, 6, 100);
+            Grupos[size-1]->update_calificacion(2, 7, 0);
+            Grupos[size-1]->add_student("Paulina Lopez", 3, 2);
+            Grupos[size-1]->update_calificacion(3, 0, 100);
+            Grupos[size-1]->update_calificacion(3, 1, 100);
+            Grupos[size-1]->update_calificacion(3, 2, 0);
+            Grupos[size-1]->update_calificacion(3, 3, 100);
+            Grupos[size-1]->update_calificacion(3, 4, 100);
+            Grupos[size-1]->update_calificacion(3, 5, 100);
+            Grupos[size-1]->update_calificacion(3, 6, 100);
+            Grupos[size-1]->update_calificacion(3, 7, 100);
+            Grupos[size-1]->add_student("Diego Medina", 4, 2);
+            Grupos[size-1]->update_calificacion(4, 0, 100);
+            Grupos[size-1]->update_calificacion(4, 1, 100);
+            Grupos[size-1]->update_calificacion(4, 2, 100);
+            Grupos[size-1]->update_calificacion(4, 3, 100);
+            Grupos[size-1]->update_calificacion(4, 4, 100);
+            Grupos[size-1]->update_calificacion(4, 5, 100);
+            Grupos[size-1]->update_calificacion(4, 6, 0);
+            Grupos[size-1]->update_calificacion(4, 7, 100);
+            Grupos[size-1]->add_student("Monica Ayala", 5, 2);
+            Grupos[size-1]->update_calificacion(5, 0, 100);
+            Grupos[size-1]->update_calificacion(5, 1, 100);
+            Grupos[size-1]->update_calificacion(5, 2, 100);
+            Grupos[size-1]->update_calificacion(5, 3, 0);
+            Grupos[size-1]->update_calificacion(5, 4, 100);
+            Grupos[size-1]->update_calificacion(5, 5, 100);
+            Grupos[size-1]->update_calificacion(5, 6, 100);
+            Grupos[size-1]->update_calificacion(5, 7, 100);
+            
+            Maestros.add("Luis Rios", 1, "1","Matematicas");
+            Maestros.add("Benjamin Valdes", 1, "1","Deportes");
+            Maestros.add("Erica Ramirez", 1, "1","Español");
+            Maestros.add("Victor Rojo", 1, "1","Etica");
+            Maestros.add("Ivana Chavez", 1, "1","Deportes");
+            
+            cout<<"LISTO \n \n";
+        }
         else{
             cout<<"Esa opcion no existe. \n";
             cout<<"\n";
         }
-    
     }
 }
