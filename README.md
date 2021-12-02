@@ -132,7 +132,7 @@ maestros en Maestros.txt
 
 # CORRECCIONES
 
-No hice entregas de la parte de arboles pero en este programa ya estan implementadas. 
+No hice entregas de la parte de arboles pero en este programa ya esta implementado. 
 Con este proyecto espero cumplir con las evidencias:
 
        Hace un análisis de complejidad correcto y completo para todo el programa y sus compenetes
