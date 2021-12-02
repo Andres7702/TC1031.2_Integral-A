@@ -7,6 +7,8 @@ Ademas de esto el programa tambien tiene una estructura de un arbol AVL que guar
 AVL pero ademas de esto tambien tienen atributos propios como nombre, ID, grado que enseñan y materia que enseñan.
 El usuario podra agregar, eliminar y consultar los datos de cada una de las personas que se encuentren dentro de estas estructuras.
 
+La funcion 11 del main sirve para agregar estudiantes y maestros ejemplo para que usted no tenga que llenar muchas cosas durante la revision.
+
 
 # SICT0302B: Toma decisiones
 
